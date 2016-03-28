@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require "#{Dir.pwd}/report"
+require "#{Dir.pwd}/email_report"
 require 'pry'
 
 ledger = [
@@ -11,5 +12,5 @@ ledger = [
  ["Kitteh Litteh",       -5.00]
 ]
 
-report = Report.new(ledger)
+report = EmailReport.new(ledger)
 puts report.formatted_output
